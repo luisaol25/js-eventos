@@ -40,4 +40,18 @@ function mostrarTablaHistorica() {
 
     div.innerHTML = html;
   }
+
+  let valoresHoy;
+  //fetch('http://worldtimeapi.org/api/timezone/America/Santiago')
+  //.then(valoresHoy = response => response.json())
+
+  fetch('http://worldtimeapi.org/api/timezone/America/Santiago')
+  .then((response) => response.json())
+  .then((data) => { document.getElementById("cajaHoy").value = data.datetime});
+  
+
+  
+
+  
+
 }
